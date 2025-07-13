@@ -48,4 +48,5 @@ fig.update_layout(
     showlegend=False
 )
 
+fig.write_html("docs/index.html")
 fig.show()
