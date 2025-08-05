@@ -41,14 +41,16 @@ fig.update_yaxes(autorange="reversed")
 fig.update_layout(
     xaxis=dict(
         range=[datetime(2025, 7, 1), datetime(2025, 10, 31)],
-        dtick=86400000.0,
+        dtick=3 * 86400000.0,
         tickformat="%d %b",
-        ticklabelmode="instant"
+        ticklabelmode="instant",
+        tickangle=45
     ),
     height=height,
-    margin=dict(l=150, r=30, t=60, b=30),
+    margin=dict(l=150, r=30, t=60, b=80),
     showlegend=False
 )
+
 
 
 fig.write_html("docs/index.html")
